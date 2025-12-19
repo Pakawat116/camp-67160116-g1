@@ -299,7 +299,7 @@
                 colors.classList.remove('is-invalid')
                 colors.classList.add('is-valid')
             }
-            // 9. ตรวจสอบแนวเพลง (Genre - Radio Button)
+            // 9. ตรวจสอบแนวเพลง (Music)
             let music = document.getElementsByName('music');
             let musicChecked = false;
 

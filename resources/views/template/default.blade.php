@@ -15,8 +15,7 @@
         @stack('styles')
     </head>
     <body>
-        <div class="card-form mt-4 contaner">
-            <h1> File Default</h1>
+        <div class="card-form mt-4 container">
             @yield('content')
         </div>
         @stack('scripts')

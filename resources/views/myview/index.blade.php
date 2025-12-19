@@ -1,0 +1,77 @@
+@extends('template.default')
+
+@section('title' , 'my view')
+@section('content')
+<h1>My view</h1>
+<?php
+    echo "My View Content";
+    echo "<br>";
+    echo "Line 2";
+?>
+<br>
+
+<?php
+$myval = "Hello PHP";
+?>
+<br>
+
+<?php
+$myval = 1;
+echo $myval;
+// Array สามารถเขียนได้หลายวิธีใน Javascript
+$myarry = Array(1,2,3,4);
+$myarry2 = [1,2,3,4];
+$myarry3[] = [1];
+$myarry3[] = [2];
+$myarry3[2] = [3];
+$myarry3[] = [4];
+
+//ใช้กับ String
+echo $myarry[0];
+echo "<br>";
+//อยากได้ข้อมูลทั้งหมดปริ้น r
+print_r($myarry2);
+echo "<br>";
+//อยากรู้ชนิดตัวแปร ใช้ dump
+var_dump($myarry3);
+?>
+
+<?php
+$myarry4 = [
+    "name" => "John",
+    "age" => 30,
+    "city" => "New york",
+    0,
+    1
+];
+print_r($myarry4);
+foreach ($myarry4 as $key => $value){
+    echo "<br>Key: " . $key . " Value: " . $value;
+}
+foreach ($myarry4 as  $value){
+    echo "<br>Value: " .$value;
+}
+$myval = "A";
+$myVal = "F";
+for($i=0; $i<10; $i++){
+    echo $myval++;
+    echo "<br>";
+}
+function myFunction(){
+    return "My Function Called";
+}
+echo MYfuncTION();
+
+$a = 10;
+if($a < 10){
+    echo "a == 10";
+}
+else if($a == 10){
+    echo "a == 10";
+}
+else{
+    echo "a > 10";
+}
+?>
+
+@endsection
