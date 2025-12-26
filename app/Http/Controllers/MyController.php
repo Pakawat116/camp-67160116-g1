@@ -12,7 +12,6 @@ class MyController extends Controller{
     // Constructor
     // MyController()
     function __construct(){
-
     }
     function index(){
         return view('myview.index');
@@ -25,4 +24,18 @@ class MyController extends Controller{
         $data['num'] = $req->input('mynumber');
         return view('myview.calculate', $data);
     }
-}
+    function store(Request $request){
+        return view('myview.view', [
+            'fname' => $request->firstname,
+            'lname' => $request->lastname,
+            'dob' => $request->dob,
+            'age' => $request->firstage,
+            'gender' => $request->gender,
+            'address' => $request->faddress,
+            'color' => $request->color,
+            'radio' => $request->music,
+        ]);
+    }
+    }
+
+

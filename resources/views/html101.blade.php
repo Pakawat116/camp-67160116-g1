@@ -57,7 +57,12 @@
             box-shadow: 0 0 0 0.2rem rgba(0, 0, 137, 0.1);
         }
     </style>
-<form action="#" method="post">
+<form class="form-box"
+      action="{{ route('calculate.store') }}"
+      method="POST"
+      enctype="multipart/form-data"
+      onsubmit="return clickMe()">
+    @csrf
             <div class="row row-form">
                 <div class="col-sm-3 col-label">ชื่อ</div>
                 <div class="col-sm-9">
@@ -186,11 +191,10 @@
                 <div class="col-sm-3"></div>
                 <div class="col-sm-9 d-flex gap-3">
                     <button type="reset" class="btn btn-light border px-4">Reset</button>
-                    <button type="button" class="btn btn-dark px-4" onclick = "clickMe()">Submit</button>
+                    <button type="submit" class="btn btn-dark px-4">Submit</button>
                 </div>
             </div>
-
-</form>
+    </form>
 @endsection
 
 @push('scripts')
@@ -363,3 +367,4 @@
 
         </script>
 @endpush
+
