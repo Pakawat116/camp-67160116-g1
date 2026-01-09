@@ -15,3 +15,6 @@ Route::get('/calculate', [App\Http\Controllers\MyController::class, 'info']);
 Route::post('/calculate', [App\Http\Controllers\MyController::class, 'calculate']);
 
 Route::post('/workshop', [App\Http\Controllers\MyController::class, 'store'])->name('calculate.store');
+
+route::resource('/flights', App\Http\Controllers\FlightController::class);
+route::resource('/pokedexs', App\Http\Controllers\PokedexsController::class);
